@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+}
 .container {
   position: relative;
   overflow-y: auto;
@@ -20,4 +23,5 @@
 .section {
   height: 100vh;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
