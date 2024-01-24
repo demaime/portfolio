@@ -9,13 +9,15 @@
   scroll-snap-type: y mandatory;
   height: 100vh;
   width: 100%;
+  scroll-behavior: smooth;
+  scroll-behavior-duration: 2000ms; /* Ajusta la duración del desplazamiento según tus preferencias */
 }
 
 .container::-webkit-scrollbar {
   display: none;
 }
+
 .section {
   height: 100vh;
   scroll-snap-align: start;
-  transition-duration: 100ms;
 }

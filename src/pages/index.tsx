@@ -12,19 +12,19 @@ export default function Home() {
     <main className="container">
       <ul className="fixed top-0 right-0 text-white font-bolder w-1/2 flex justify-around">
         <li>
-          <Link href={"#huevo1"}> Huevo1</Link>
+          <Link href={"#huevo1"}>Huevo1</Link>
         </li>
         <li>
-          <Link href={"#huevo2"}> Huevo2</Link>
+          <Link href={"#huevo2"}>Huevo2</Link>
         </li>
         <li>
-          <Link href={"#huevo3"}> Huevo3</Link>
+          <Link href={"#huevo3"}>Huevo3</Link>
         </li>
       </ul>
 
-      <Me></Me>
-      <Projects></Projects>
-      <About></About>
+      <Me />
+      <Projects />
+      <About />
     </main>
   );
 }
