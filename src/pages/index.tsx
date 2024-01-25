@@ -6,26 +6,35 @@ import About from "@/components/About";
 import DotsNavigation from "@/components/DotsNavigation";
 
 export default function Home() {
-  const mainRef = useRef(null);
+  const mainRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const main = mainRef.current;
-      const scrollY = main.scrollTop;
+      if (main) {
+        const scrollY = main.scrollTop;
 
-      if (scrollY < 703.2000122070312) {
-        history.pushState(null, null, "/#me");
-      } else if (scrollY >= 703.2000122070312 && scrollY < 1406.4000244140625) {
-        history.pushState(null, null, "/#projects");
-      } else {
-        history.pushState(null, null, "/#about");
+        if (scrollY < 703.2000122070312) {
+          history.pushState(null, "", "/#me");
+        } else if (
+          scrollY >= 703.2000122070312 &&
+          scrollY < 1406.4000244140625
+        ) {
+          history.pushState(null, "", "/#projects");
+        } else {
+          history.pushState(null, "", "/#about");
+        }
       }
     };
 
     const main = mainRef.current;
-    main.addEventListener("scroll", handleScroll);
+    if (main) {
+      main.addEventListener("scroll", handleScroll);
+    }
     return () => {
-      main.removeEventListener("scroll", handleScroll);
+      if (main) {
+        main.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
