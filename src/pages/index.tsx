@@ -51,7 +51,7 @@ export default function Home() {
           <Link href="#about">about</Link>
         </li>
       </ul>
-      <DotsNavigation />
+      {/* <DotsNavigation /> */}
 
       <Me />
       <Projects />

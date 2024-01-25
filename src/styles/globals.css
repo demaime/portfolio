@@ -8,7 +8,7 @@ body {
 
 .full-container {
   position: relative;
-  overflow-y: auto;
+  overflow-y: scroll;
   overscroll-behavior-y: contain;
   scroll-snap-type: y mandatory;
   height: 100dvh;
@@ -17,7 +17,21 @@ body {
 }
 
 .full-container::-webkit-scrollbar {
-  display: none;
+  width: 2px;
+  background-color: rgb(163, 162, 162);
+}
+
+.full-container::-webkit-scrollbar-track {
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+.full-container::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  pointer-events: none;
+  background-color: transparent;
+  background-clip: content-box;
+  background-color: #5d5555;
 }
 
 .section {
@@ -33,4 +47,22 @@ body {
 
 .active {
   background-color: rebeccapurple;
+}
+
+.bg-gradient-blue1 {
+  background: rgb(6, 0, 106);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 0, 106, 1) 35%,
+    rgba(4, 12, 156, 1) 70%
+  );
+}
+
+.bg-gradient-blue2 {
+  background: rgb(6, 0, 106);
+  background: linear-gradient(
+    180deg,
+    rgba(6, 0, 106, 1) 35%,
+    rgba(4, 12, 156, 1) 70%
+  );
 }
