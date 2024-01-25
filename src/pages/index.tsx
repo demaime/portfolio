@@ -1,24 +1,45 @@
-import { Inter } from "next/font/google";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Me from "@/components/Me";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import DotsNavigation from "@/components/DotsNavigation";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const main = mainRef.current;
+      const scrollY = main.scrollTop;
+
+      if (scrollY < 703.2000122070312) {
+        history.pushState(null, null, "/#me");
+      } else if (scrollY >= 703.2000122070312 && scrollY < 1406.4000244140625) {
+        history.pushState(null, null, "/#projects");
+      } else {
+        history.pushState(null, null, "/#about");
+      }
+    };
+
+    const main = mainRef.current;
+    main.addEventListener("scroll", handleScroll);
+    return () => {
+      main.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <main className="full-container">
+    <main className="full-container" ref={mainRef}>
       <ul className="fixed top-0 right-0 text-white font-bolder w-1/2 flex justify-around">
         <li>
-          <Link href={"#me"}>me</Link>
+          <Link href="#me">me</Link>
         </li>
         <li>
-          <Link href={"#projects"}>projects</Link>
+          <Link href="#projects">projects</Link>
         </li>
         <li>
-          <Link href={"#about"}>about</Link>
+          <Link href="#about">about</Link>
         </li>
       </ul>
       <DotsNavigation />
