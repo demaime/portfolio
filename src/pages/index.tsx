@@ -40,15 +40,21 @@ export default function Home() {
 
   return (
     <main className="full-container" ref={mainRef}>
-      <ul className="fixed top-0 right-0 text-white font-bolder w-1/2 flex justify-around">
+      <ul className="fixed top-0 right-0 text-white font-bolder w-1/2 flex justify-around ">
         <li>
-          <Link href="#me">me</Link>
+          <Link className="text-shadow" href="#me">
+            me
+          </Link>
         </li>
         <li>
-          <Link href="#projects">projects</Link>
+          <Link href="#projects" className="text-shadow">
+            projects
+          </Link>
         </li>
         <li>
-          <Link href="#about">about</Link>
+          <Link href="#about" className="text-shadow">
+            about
+          </Link>
         </li>
       </ul>
       {/* <DotsNavigation /> */}
