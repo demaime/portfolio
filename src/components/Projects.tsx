@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <div className="section bg-gradient-blue2" id="projects">
       <div
-        className="w-8/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
+        className="w-11/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
         style={{ borderRadius: "4.5vh" }}
       >
         <div className="phone-container">
