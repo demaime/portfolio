@@ -18,7 +18,14 @@ body {
 
 .full-container::-webkit-scrollbar {
   width: 3px;
-  background-color: rgb(163, 162, 162);
+  background: rgb(212, 114, 114);
+  background: linear-gradient(
+    0deg,
+    rgba(212, 114, 114, 1) 2%,
+    rgba(210, 78, 78, 1) 73%,
+    rgba(201, 60, 60, 1) 86%,
+    rgba(189, 55, 55, 1) 100%
+  );
 }
 
 .full-container::-webkit-scrollbar-track {
@@ -45,11 +52,7 @@ body {
   align-items: center;
 }
 
-.active {
-  background-color: rebeccapurple;
-}
-
-.bg-gradient-blue1 {
+.bg-gradient-1 {
   background: rgb(212, 114, 114);
   background: linear-gradient(
     0deg,
@@ -60,7 +63,7 @@ body {
   );
 }
 
-.bg-gradient-blue2 {
+.bg-gradient-2 {
   background: rgb(212, 114, 114);
   background: linear-gradient(
     180deg,
