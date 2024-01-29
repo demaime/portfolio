@@ -1,6 +1,22 @@
 import React from "react";
 
 export default function Projects() {
+  const projects = [
+    {
+      title: "Microimplant",
+      description:
+        "Sitio tipo catalogo desarrollado para empresa de implantes ortopédicos",
+      mobile: "/assets/microimplant_mobile.png",
+      desktop: "/assets/microimplant_desktop.png",
+    },
+    {
+      title: "HeroApp",
+      description: "Webapp basada en un challenge de Alkemy.org",
+      mobile: "/assets/heroapp_mobile.png",
+      desktop: "/assets/heroapp_desktop.png",
+    },
+  ];
+
   return (
     <div className="section bg-gradient-2" id="projects">
       <div
