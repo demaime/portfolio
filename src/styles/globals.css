@@ -85,9 +85,10 @@ body {
 
 .phone {
   height: 100%;
-  max-width: 250px;
+  max-width: 235px;
   display: block;
   border: 1.334vh solid #111;
+
   border-radius: 4.5vh;
 }
 
@@ -103,7 +104,7 @@ body {
 }
 
 .monitor {
-  width: 100%;
+  width: 26vw;
   height: 32vh;
   border: solid 0.5em #111;
   border-radius: 0.5em;
@@ -111,7 +112,7 @@ body {
 
 .stand {
   position: absolute;
-  width: 400px;
+  width: 26vw;
 }
 
 .stand:after {
@@ -121,6 +122,6 @@ body {
   background: #111;
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
-  width: 400px;
+  width: 26vw;
   height: 12px;
 }
