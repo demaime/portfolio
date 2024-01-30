@@ -79,7 +79,7 @@ export default function Projects() {
         className="hidden lg:block absolute top-1/2 left-2 cursor-pointer text-gray-400 hover:text-gray-800"
       ></SlArrowLeft>
       <div
-        className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative -mt-8"
+        className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
         style={{ borderRadius: "4.5vh" }}
       >
         <div className="lg:hidden hidden sm:flex flex-col items-center justify-evenly text-2xl h-full w-1/2 absolute right-4 text-center">
