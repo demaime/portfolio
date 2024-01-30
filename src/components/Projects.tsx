@@ -108,13 +108,7 @@ export default function Projects() {
             style={{
               backgroundImage: `url(${projects[currentIndex].mobile})`,
             }}
-          >
-            {/* <picture
-              className="w-full h-full bg-center bg-cover duration-500"
-              
-            ></picture> */}
-            {/* <img src={projects[currentIndex].mobile} alt="" /> */}
-          </div>
+          ></div>
         </div>
         <div className="absolute left-[38%] -bottom-2 h-full">
           <article className="hidden lg:block relative ">
@@ -124,9 +118,7 @@ export default function Projects() {
                 style={{
                   backgroundImage: `url(${projects[currentIndex].desktop})`,
                 }}
-              >
-                {/* <img src={projects[currentIndex].desktop} /> */}
-              </div>
+              ></div>
             </div>
           </article>
         </div>
