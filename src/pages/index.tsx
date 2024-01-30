@@ -3,7 +3,6 @@ import Link from "next/link";
 import Me from "@/components/Me";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
-import DotsNavigation from "@/components/DotsNavigation";
 
 export default function Home() {
   const mainRef = useRef<HTMLDivElement | null>(null);
@@ -47,17 +46,16 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link href="#projects" className="text-shadow">
+          <Link className="text-shadow" href="#projects">
             projects
           </Link>
         </li>
         <li>
-          <Link href="#about" className="text-shadow">
+          <Link className="text-shadow" href="#about">
             about
           </Link>
         </li>
       </ul>
-      {/* <DotsNavigation /> */}
 
       <Me />
       <Projects />
