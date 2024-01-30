@@ -79,7 +79,7 @@ export default function Projects() {
         className="hidden lg:block absolute top-1/2 left-2 cursor-pointer text-gray-400 hover:text-gray-800"
       ></SlArrowLeft>
       <div
-        className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
+        className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative -mt-8"
         style={{ borderRadius: "4.5vh" }}
       >
         <div className="lg:hidden hidden sm:flex flex-col items-center justify-evenly text-2xl h-full w-1/2 absolute right-4 text-center">
@@ -131,7 +131,7 @@ export default function Projects() {
           </article>
         </div>
 
-        <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
+        {/* <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
           <li key={currentIndex} className="transition-all hover:scale-125">
             <img src={`/assets/html.png`} alt="" />
           </li>
@@ -144,12 +144,12 @@ export default function Projects() {
           <li key={currentIndex} className="transition-all hover:scale-125">
             <img src={`/assets/json.png`} alt="" />
           </li>
-          {/* {projects[currentIndex].techs.map((tech) => (
+        </ul> */}
+        {/* {projects[currentIndex].techs.map((tech) => (
             <li key={currentIndex} className="transition-all hover:scale-125">
               <img src={`/assets/${tech}.png`} alt="" />
             </li>
           ))} */}
-        </ul>
       </div>
       <footer className="w-full bg-transparent sm:hidden flex items-center absolute bottom-4 h-20 justify-evenly">
         <SlArrowLeft size={30} onClick={nextSlide}></SlArrowLeft>
