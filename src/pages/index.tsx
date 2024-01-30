@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <main className="full-container" ref={mainRef}>
-      <ul className="fixed top-0 right-0 text-white font-bolder w-1/2 flex justify-around ">
+      <ul className="fixed top-0 right-0 text-white font-bolder w-1/2 flex justify-around z-50">
         <li>
           <Link className="text-shadow" href="#me">
             me
