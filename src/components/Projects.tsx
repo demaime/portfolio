@@ -103,21 +103,29 @@ export default function Projects() {
           </div>
         </div>
         <div className="phone-container">
-          <div className="phone">
+          <div
+            className="phone bg-center bg-cover duration-500"
+            style={{
+              backgroundImage: `url(${projects[currentIndex].mobile})`,
+            }}
+          >
             {/* <picture
               className="w-full h-full bg-center bg-cover duration-500"
-              style={{
-                backgroundImage: `url(${projects[currentIndex].mobile})`,
-              }}
+              
             ></picture> */}
-            <img src={projects[currentIndex].mobile} alt="" />
+            {/* <img src={projects[currentIndex].mobile} alt="" /> */}
           </div>
         </div>
         <div className="absolute left-[38%] -bottom-2 h-full">
           <article className="hidden lg:block relative ">
             <div className="stand">
-              <div className="monitor duration-500">
-                <img src={projects[currentIndex].desktop} />
+              <div
+                className="monitor bg-center bg-cover duration-500"
+                style={{
+                  backgroundImage: `url(${projects[currentIndex].desktop})`,
+                }}
+              >
+                {/* <img src={projects[currentIndex].desktop} /> */}
               </div>
             </div>
           </article>

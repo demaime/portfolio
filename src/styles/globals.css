@@ -83,9 +83,12 @@ body {
   margin-top: -20px;
 }
 
-.phone,
-.phone img {
+.phone {
   height: 100%;
+  max-width: 250px;
+  display: block;
+  border: 1.334vh solid #111;
+  border-radius: 4.5vh;
 }
 
 .phone .notch-container {
@@ -97,16 +100,6 @@ body {
   background-color: #111;
   border-bottom-left-radius: 2.334vh;
   border-bottom-right-radius: 2.334vh;
-}
-
-.phone img {
-  display: block;
-  border: 1.334vh solid #111;
-  border-radius: 4.5vh;
-}
-
-.monitor img {
-  height: 100%;
 }
 
 .monitor {
