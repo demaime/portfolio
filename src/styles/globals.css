@@ -85,10 +85,9 @@ body {
 
 .phone {
   height: 100%;
-  max-width: 325px;
+  max-width: 260px;
   display: block;
   border: 1.334vh solid #111;
-
   border-radius: 4.5vh;
 }
 
@@ -124,4 +123,11 @@ body {
   border-top-right-radius: 0.5em;
   width: 26vw;
   height: 12px;
+}
+
+@media (min-height: 800px) {
+  .phone {
+    height: 100%;
+    max-width: 320px;
+  }
 }
