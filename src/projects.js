@@ -6,6 +6,8 @@ export const projects = [
     mobile: "/assets/microimplant_mobile.png",
     desktop: "/assets/microimplant_desktop.png",
     techs: ["html", "tailwind", "javascript", "json"],
+    demo: "http://www.microimplant.com.ar",
+    code: "https://github.com/demaime/MicroImplant",
   },
   {
     title: "HeroApp",
@@ -13,6 +15,8 @@ export const projects = [
     mobile: "/assets/heroapp_mobile.png",
     desktop: "/assets/heroapp_desktop.png",
     techs: ["next", "tailwind", "typescript"],
+    demo: "https://heroapp-demaime.vercel.app/",
+    code: "https://github.com/demaime/heroapp",
   },
   {
     title: "BookShelf",
@@ -21,6 +25,8 @@ export const projects = [
     mobile: "/assets/bookshelf_mobile.png",
     desktop: "/assets/bookshelf_desktop.png",
     techs: ["next", "tailwind", "typescript"],
+    demo: "https://bookshelf-demaime.vercel.app/",
+    code: "https://github.com/demaime/bookshelf",
   },
   {
     title: "Emoji Finder",
@@ -29,6 +35,8 @@ export const projects = [
     mobile: "/assets/emojifinder_mobile.png",
     desktop: "/assets/emojifinder_desktop.png",
     techs: ["react", "tailwind"],
+    demo: "https://emoji-finder-five.vercel.app/",
+    code: "https://github.com/demaime/emoji_finder",
   },
   {
     title: "Ahorcado",
@@ -37,6 +45,8 @@ export const projects = [
     mobile: "/assets/ahorcado_mobile.png",
     desktop: "/assets/ahorcado_desktop.png",
     techs: ["html", "css", "javascript"],
+    demo: "https://demaime.github.io/challenge-oracle-ahorcado/",
+    code: "https://github.com/demaime/challenge-oracle-ahorcado",
   },
   {
     title: "Encryptor",
@@ -45,5 +55,7 @@ export const projects = [
     mobile: "/assets/encryptor_mobile.png",
     desktop: "/assets/encryptor_desktop.png",
     techs: ["html", "css", "javascript"],
+    demo: "https://demaime.github.io/challenge-oracle-decoder/",
+    code: "https://github.com/demaime/challenge-oracle-decoder",
   },
 ];

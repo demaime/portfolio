@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { projects } from "../projects.js";
+import Link from "next/link.js";
+import Image from "next/image.js";
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,8 +61,27 @@ export default function Projects() {
           </div>
           <p className="text-sm">{projects[currentIndex].description}</p>
           <div className="w-1/2 flex justify-evenly">
-            <img className="w-12 h-12" src="/assets/github.png" alt="" />
-            <img className="w-12 h-12" src="/assets/site.png" alt="" />
+            <Link href={projects[currentIndex].code} target="_blank">
+              <Image
+                src={"/assets/github.png"}
+                width={50}
+                height={50}
+                alt="github"
+              />
+              {/* <img
+                className="w-12 h-12 hover:scale-125 duration-300 cursor-pointer"
+                src="/assets/github.png "
+                alt=""
+              /> */}
+            </Link>
+            <Link href={projects[currentIndex].demo} target="_blank">
+              <Image
+                src={"/assets/site.png"}
+                width={50}
+                height={50}
+                alt="demo"
+              />
+            </Link>
           </div>
         </div>
         <div className="phone-container">
@@ -89,10 +110,27 @@ export default function Projects() {
           </div>
           <p>{projects[currentIndex].description}</p>
           <div className="w-1/2 flex justify-evenly">
-            <img className="w-12 h-12" src="/assets/github.png" alt="" />
-            <img className="w-12 h-12" src="/assets/site.png" alt="" />
+            <Link href={projects[currentIndex].code} target="_blank">
+              <Image
+                src={"/assets/github.png"}
+                width={50}
+                height={50}
+                alt="github"
+                className="hover:scale-125 duration-300 cursor-pointer"
+              />
+            </Link>
+            <Link href={projects[currentIndex].demo} target="_blank">
+              <Image
+                src={"/assets/site.png"}
+                width={50}
+                height={50}
+                alt="demo"
+                className="hover:scale-125 duration-300 cursor-pointer"
+              />
+            </Link>
           </div>
         </div>
+
         {/* <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
           <li key={currentIndex} className="transition-all hover:scale-125">
             <img src={`/assets/html.png`} alt="" />
@@ -115,8 +153,24 @@ export default function Projects() {
       ))} */}
       <footer className="w-full bg-transparent sm:hidden flex items-center absolute bottom-4 h-20 justify-evenly">
         <SlArrowLeft size={30} onClick={nextSlide}></SlArrowLeft>
-        <img className="w-8 h-8" src="/assets/github.png" alt="" />
-        <img className="w-8 h-8" src="/assets/site.png" alt="" />
+        <Link href={projects[currentIndex].code} target="_blank">
+          <Image
+            src={"/assets/github.png"}
+            width={33}
+            height={33}
+            alt="github"
+            className="hover:scale-125 duration-300 cursor-pointer"
+          />
+        </Link>
+        <Link href={projects[currentIndex].demo} target="_blank">
+          <Image
+            src={"/assets/site.png"}
+            width={33}
+            height={33}
+            alt="demo"
+            className="hover:scale-125 duration-300 cursor-pointer"
+          />
+        </Link>
         <SlArrowRight size={30} onClick={prevSlide}></SlArrowRight>
       </footer>
     </div>
