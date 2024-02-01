@@ -65,7 +65,7 @@ export default function Projects() {
         </div>
         <div className="phone-container">
           <div
-            className="phone bg-center bg-cover duration-500 bg-gray-200"
+            className="phone bg-center bg-cover duration-500 bg-red-500"
             style={{
               backgroundImage: `url(${projects[currentIndex].mobile})`,
             }}
