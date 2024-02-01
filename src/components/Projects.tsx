@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { projects } from "../projects.js";
 
@@ -14,16 +14,57 @@ export default function Projects() {
       }
     };
 
-    // if (router.asPath.includes("#projects")) {
+    const handleTouchStart = (event: TouchEvent) => {
+      touchStartX.current = event.touches[0].clientX;
+    };
+
+    const handleTouchMove = (event: TouchEvent) => {
+      if (!touchStartX.current) return;
+
+      const touchEndX = event.touches[0].clientX;
+      const deltaX = touchStartX.current - touchEndX;
+
+      if (deltaX > 50) {
+        nextSlide(); // Swipe izquierdo
+      } else if (deltaX < -50) {
+        prevSlide(); // Swipe derecho
+      }
+
+      touchStartX.current = null;
+    };
+
     document.addEventListener("keydown", handleKeyDown);
-    // }
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchmove", handleTouchMove);
 
     return () => {
-      // if (router.asPath.includes("#projects")) {
       document.removeEventListener("keydown", handleKeyDown);
-      // }
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
     };
   }, [currentIndex]);
+
+  const touchStartX = useRef(null);
+
+  // useEffect(() => {
+  //   const handleKeyDown = (event: KeyboardEvent) => {
+  //     if (event.key === "ArrowLeft") {
+  //       prevSlide();
+  //     } else if (event.key === "ArrowRight") {
+  //       nextSlide();
+  //     }
+  //   };
+
+  //   // if (router.asPath.includes("#projects")) {
+  //   document.addEventListener("keydown", handleKeyDown);
+  //   // }
+
+  //   return () => {
+  //     // if (router.asPath.includes("#projects")) {
+  //     document.removeEventListener("keydown", handleKeyDown);
+  //     // }
+  //   };
+  // }, [currentIndex]);
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
