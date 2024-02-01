@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { projects } from "../projects.js";
 
@@ -65,13 +65,13 @@ export default function Projects() {
         </div>
         <div className="phone-container">
           <div
-            className="phone bg-center bg-cover duration-500"
+            className="phone bg-center bg-cover duration-500 bg-gray-200"
             style={{
               backgroundImage: `url(${projects[currentIndex].mobile})`,
             }}
           ></div>
         </div>
-        <div className="hidden lg:flex bg-transparent h-48 w-[400px] absolute z-50 top-4 left-[38%] text-center flex-col items-center justify-around">
+        <div className="hidden lg:flex bg-transparent h-48 w-[400px] absolute z-50 top-4 left-[38.5%] text-center flex-col items-center justify-around">
           <article className="hidden lg:block relative ">
             <div className="stand">
               <div
@@ -93,7 +93,26 @@ export default function Projects() {
             <img className="w-12 h-12" src="/assets/site.png" alt="" />
           </div>
         </div>
+        {/* <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
+          <li key={currentIndex} className="transition-all hover:scale-125">
+            <img src={`/assets/html.png`} alt="" />
+          </li>
+          <li key={currentIndex} className="transition-all hover:scale-125">
+            <img src={`/assets/tailwind.png`} alt="" />
+          </li>
+          <li key={currentIndex} className="transition-all hover:scale-125">
+            <img src={`/assets/javascript.png`} alt="" />
+          </li>
+          <li key={currentIndex} className="transition-all hover:scale-125">
+            <img src={`/assets/json.png`} alt="" />
+          </li>
+        </ul> */}
       </div>
+      {/* {projects[currentIndex].techs.map((tech) => (
+        <li key={currentIndex} className="transition-all hover:scale-125">
+          <img src={`/assets/${tech}.png`} alt="" />
+        </li>
+      ))} */}
       <footer className="w-full bg-transparent sm:hidden flex items-center absolute bottom-4 h-20 justify-evenly">
         <SlArrowLeft size={30} onClick={nextSlide}></SlArrowLeft>
         <img className="w-8 h-8" src="/assets/github.png" alt="" />
