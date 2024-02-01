@@ -85,7 +85,7 @@ body {
 
 .phone {
   height: 100%;
-  max-width: 248px;
+  max-width: 250px;
   display: block;
   border: 1.334vh solid #111;
   border-radius: 4.5vh;
@@ -110,7 +110,6 @@ body {
 }
 
 .stand {
-  position: absolute;
   width: 26vw;
 }
 
