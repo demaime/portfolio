@@ -56,7 +56,7 @@ export default function Projects() {
         className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
         style={{ borderRadius: "4.5vh" }}
       >
-        <div className="lg:hidden hidden sm:flex flex-col items-center justify-evenly text-2xl h-full w-1/2 absolute right-4 text-center">
+        <div className="lg:hidden hidden sm:flex flex-col items-center justify-evenly text-2xl h-full w-1/2 p-8 absolute right-4 text-center">
           <div className="text-3xl font-bold">
             {projects[currentIndex].title}
           </div>
@@ -69,11 +69,6 @@ export default function Projects() {
                 height={50}
                 alt="github"
               />
-              {/* <img
-                className="w-12 h-12 hover:scale-125 duration-300 cursor-pointer"
-                src="/assets/github.png "
-                alt=""
-              /> */}
             </Link>
             <Link href={projects[currentIndex].demo} target="_blank">
               <Image
@@ -133,7 +128,7 @@ export default function Projects() {
         </div>
         <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
           {projects[currentIndex].techs.map((tech, index) => (
-            <li key={index} className="transition-all hover:scale-125">
+            <li key={index} className="cursor-pointer">
               <img src={`/assets/${tech}.png`} alt="" />
             </li>
           ))}

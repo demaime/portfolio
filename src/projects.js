@@ -11,7 +11,8 @@ export const projects = [
   },
   {
     title: "HeroApp",
-    description: "Webapp basada en un challenge de Alkemy.org",
+    description:
+      "Webapp para armar un equipo de heroes de la clásica superhero API. Basada en un challenge de Alkemy.org",
     mobile: "/assets/heroapp_mobile.png",
     desktop: "/assets/heroapp_desktop.png",
     techs: ["next", "tailwind", "typescript"],
