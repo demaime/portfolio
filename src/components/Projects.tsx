@@ -51,6 +51,7 @@ export default function Projects() {
         onClick={nextSlide}
         className="hidden sm:block absolute top-1/2 left-2 cursor-pointer text-gray-400 hover:text-gray-800"
       ></SlArrowLeft>
+      {/* <navArrowsDesktop prevSlide={prevSlide} nextSlide={nextSlide} /> */}
       <div
         className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
         style={{ borderRadius: "4.5vh" }}
@@ -130,27 +131,15 @@ export default function Projects() {
             </Link>
           </div>
         </div>
-
-        {/* <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
-          <li key={currentIndex} className="transition-all hover:scale-125">
-            <img src={`/assets/html.png`} alt="" />
-          </li>
-          <li key={currentIndex} className="transition-all hover:scale-125">
-            <img src={`/assets/tailwind.png`} alt="" />
-          </li>
-          <li key={currentIndex} className="transition-all hover:scale-125">
-            <img src={`/assets/javascript.png`} alt="" />
-          </li>
-          <li key={currentIndex} className="transition-all hover:scale-125">
-            <img src={`/assets/json.png`} alt="" />
-          </li>
-        </ul> */}
+        <ul className="absolute h-full -right-6 top-0 w-12 bg-transparent flex flex-col justify-around items-center">
+          {projects[currentIndex].techs.map((tech, index) => (
+            <li key={index} className="transition-all hover:scale-125">
+              <img src={`/assets/${tech}.png`} alt="" />
+            </li>
+          ))}
+        </ul>
       </div>
-      {/* {projects[currentIndex].techs.map((tech) => (
-        <li key={currentIndex} className="transition-all hover:scale-125">
-          <img src={`/assets/${tech}.png`} alt="" />
-        </li>
-      ))} */}
+
       <footer className="w-full bg-transparent sm:hidden flex items-center absolute bottom-4 h-20 justify-evenly">
         <SlArrowLeft size={30} onClick={nextSlide}></SlArrowLeft>
         <Link href={projects[currentIndex].code} target="_blank">
