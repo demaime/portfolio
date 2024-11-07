@@ -3,7 +3,7 @@ import Presentation from "./Presentation";
 
 export default function Me() {
   return (
-    <div className="section bg-gradient-1" id="me">
+    <div className="section" id="me">
       <Presentation />
     </div>
   );

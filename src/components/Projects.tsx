@@ -40,7 +40,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="section bg-gradient-2 relative" id="projects">
+    <div className="section relative" id="projects">
       <SlArrowRight
         size={40}
         onClick={prevSlide}
@@ -53,7 +53,7 @@ export default function Projects() {
       ></SlArrowLeft>
       {/* <navArrowsDesktop prevSlide={prevSlide} nextSlide={nextSlide} /> */}
       <div
-        className="w-10/12 md:w-2/3 h-2/3 p2 bg-red-300 shadow-xl relative"
+        className="w-10/12 md:w-2/3 h-2/3 p2 bg-gray-500 shadow-xl relative"
         style={{ borderRadius: "4.5vh" }}
       >
         <div className="lg:hidden hidden sm:flex flex-col items-center justify-evenly text-2xl h-full w-1/2 p-8 absolute right-4 text-center">
